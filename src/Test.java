@@ -51,7 +51,7 @@ public class Test {
 
         employeesB[0] = new Cashier(3, "Naruto", "Tokyo", 50, 3);
         employeesB[1] = new Seller(13, "Madara", "Paris", 100, 17);
-        employeesB[2] = new Seller(4, "Itachi", "sbz", 100, 17);
+        employeesB[2] = new Seller(4, "Itachi", "sbz", 100, 1.2);
         employeesB[3] = new Seller(7, "L", "sbz", 100, 17);
         employeesB[4] = new Responsible(1, "Salma", "sbz", 100, 17.5);
 
@@ -71,6 +71,10 @@ public class Test {
         //Show store A AND B details
         System.out.println(storeA);
         System.out.println(storeB);
+        // salary of responsible
+        System.out.println("salary of responsible :"+((Responsible)employeesB[4]).salaryResponsible());
+        // salary of  seller
+        System.out.println("salary of  seller :"+((Seller)employeesB[2]).salarySeller());
     }
 
     public static void showAllProducts(Product[] products) {

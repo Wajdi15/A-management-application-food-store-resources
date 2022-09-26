@@ -6,6 +6,15 @@ public class Responsible extends Employee {
         this.prime = prime;
     }
 
+    public double salaryResponsible() {
+        double salaryInMonth;
+        double salaryH = 10;
+        salaryInMonth = (nbrHours * salaryH) + prime;
+        if(nbrHours > 160) {
+            salaryInMonth += (nbrHours - 160) * (salaryH + (salaryH * 20 / 100));
+        }
+        return salaryInMonth;
+    }
     @Override
     public String toString() {
         return "Responsible{" +
