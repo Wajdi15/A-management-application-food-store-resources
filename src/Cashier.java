@@ -5,7 +5,7 @@ public class Cashier extends Employee {
         super(id, name, address, nbrHours);
         this.numDeCaisse = numDeCaisse;
     }
-    public double salaryCashier() {
+    public double salary() {
         double salaryInMonth;
         double salaryH = 5;
         salaryInMonth = nbrHours * salaryH;

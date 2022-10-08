@@ -4,7 +4,7 @@ public class Seller extends Employee{
         super(id, name, address, nbrHours);
         this.tauxDeVente = tauxDeVente;
     }
-    public double salarySeller() {
+    public double salary() {
         double salaryInMonth = 450;
         salaryInMonth *= tauxDeVente;
         return salaryInMonth;

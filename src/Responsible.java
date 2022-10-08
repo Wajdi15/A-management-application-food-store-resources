@@ -6,7 +6,7 @@ public class Responsible extends Employee {
         this.prime = prime;
     }
 
-    public double salaryResponsible() {
+    public double salary() {
         double salaryInMonth;
         double salaryH = 10;
         salaryInMonth = (nbrHours * salaryH) + prime;

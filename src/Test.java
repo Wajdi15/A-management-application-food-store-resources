@@ -72,9 +72,9 @@ public class Test {
         System.out.println(storeA);
         System.out.println(storeB);
         // salary of responsible
-        System.out.println("salary of responsible :"+((Responsible)employeesB[4]).salaryResponsible());
+        System.out.println("salary of responsible :"+employeesB[4].salary());
         // salary of  seller
-        System.out.println("salary of  seller :"+((Seller)employeesB[2]).salarySeller());
+        System.out.println("salary of  seller :"+employeesB[2].salary());
     }
 
     public static void showAllProducts(Product[] products) {

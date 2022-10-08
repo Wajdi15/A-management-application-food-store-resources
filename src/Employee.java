@@ -1,4 +1,4 @@
-public class Employee {
+public abstract class Employee {
     int id;
     String name;
     String address;
@@ -10,6 +10,8 @@ public class Employee {
         this.address = address;
         this.nbrHours = nbrHours;
     }
+
+    abstract double salary();
 
     @Override
     public String toString() {
