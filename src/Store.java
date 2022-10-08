@@ -128,6 +128,14 @@ public class Store {
         }
     }
 
+    public float calculStock() {
+        float sum = 0;
+        for (int i = 0; i < productIndex; i++) {
+            if(products[i] instanceof FruitProduct)
+                sum += ((FruitProduct)products[i]).quantite;
+        }
+        return sum;
+    }
     @Override
     public String toString() {
         return "Store{" +

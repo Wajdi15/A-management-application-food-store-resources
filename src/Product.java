@@ -25,6 +25,11 @@ public class Product {
         this.expirationDate = formatter.parse(expirationDate);
     }
 
+    Product(int id, String label) {
+        this.id = id;
+        this.label = label;
+    }
+
     Product() {
     }
 

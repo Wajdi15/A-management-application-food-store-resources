@@ -1,6 +1,6 @@
 import java.text.ParseException;
 
-public class Test {
+public class Test<products> {
     public static void main(String[] args) throws ParseException {
         //partie : I
         Product[] products = new Product[50];
@@ -75,7 +75,22 @@ public class Test {
         System.out.println("salary of responsible :"+employeesB[4].salary());
         // salary of  seller
         System.out.println("salary of  seller :"+employeesB[2].salary());
+        //partie V:
+        Store storeV = new Store(6, "Carrefour", "Centre-Ville");
+
+        products[4] = new FruitProduct(1254,"Fraise",12.3,"Mars");
+        products[5] = new FruitProduct(1224, "Pastèque",50,"Juin");
+        products[6] = new FruitProduct(7896, "Mandarine",25.6,"December");
+        products[7] = new VegetableProduct(8521, "Artichauts",15,"Janvier");
+
+        //add product to the store1
+        for (int i = 4; i < 8; i++) {
+            storeV.addProduct(products[i]);
+        }
+        System.out.println("quantité de Fruits dans ce magasin :"+ storeV.calculStock());
+
     }
+
 
     public static void showAllProducts(Product[] products) {
         for (int i = 0; i < 4; i++) {
