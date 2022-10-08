@@ -1,3 +1,6 @@
+package presentation;
+
+import metier.*;
 import java.text.ParseException;
 
 public class Test<products> {

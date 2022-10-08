@@ -1,4 +1,4 @@
-import java.util.Arrays;
+package metier;
 
 public class Store {
     private int id;
@@ -12,7 +12,7 @@ public class Store {
 
     private static int nbrTotalOfProducts = 0;
 
-    Store (int id,String name,String address){
+    public Store (int id,String name,String address){
         this.id = id;
         this.name = name;
         this.address = address;
@@ -132,7 +132,7 @@ public class Store {
         float sum = 0;
         for (int i = 0; i < productIndex; i++) {
             if(products[i] instanceof FruitProduct)
-                sum += ((FruitProduct)products[i]).quantite;
+                sum += ((FruitProduct)products[i]).getQuantite();
         }
         return sum;
     }

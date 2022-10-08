@@ -1,6 +1,8 @@
+package metier;
+
 public class Seller extends Employee{
-    double tauxDeVente;
-    Seller(int id, String name, String address, int nbrHours, double tauxDeVente) {
+    public double tauxDeVente;
+    public Seller(int id, String name, String address, int nbrHours, double tauxDeVente) {
         super(id, name, address, nbrHours);
         this.tauxDeVente = tauxDeVente;
     }

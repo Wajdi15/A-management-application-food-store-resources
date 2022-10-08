@@ -1,17 +1,14 @@
-public class VegetableProduct extends AgriculturalProduct implements Critere{
+package metier;
+
+public class VegetableProduct extends AgriculturalProduct implements Critere {
 
     public VegetableProduct(int id, String label, double quantite, String season) {
         super(id, label, "Vegetable", quantite, season);
     }
 
     @Override
-    String determinerTypeProduit() {
-        return type;
-    }
-
-    @Override
     public boolean estFrais(String season) {
-        int a = rechechePosMoins(this.season);
+        int a = rechechePosMoins(this.getSeason());
         int b = rechechePosMoins(season);
         if(a == b || b==a+1 || (a == 11 && b == 0))
             return true;

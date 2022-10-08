@@ -1,3 +1,5 @@
+package metier;
+
 public abstract class Employee {
     int id;
     String name;
@@ -11,7 +13,7 @@ public abstract class Employee {
         this.nbrHours = nbrHours;
     }
 
-    abstract double salary();
+    public abstract double salary();
 
     @Override
     public String toString() {

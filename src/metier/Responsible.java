@@ -1,7 +1,9 @@
+package metier;
+
 public class Responsible extends Employee {
     double prime;
 
-    Responsible(int id, String name, String address, int nbrHours, double prime) {
+    public Responsible(int id, String name, String address, int nbrHours, double prime) {
         super(id, name, address, nbrHours);
         this.prime = prime;
     }

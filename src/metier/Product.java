@@ -1,4 +1,5 @@
-import javax.xml.crypto.Data;
+package metier;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -11,7 +12,7 @@ public class Product {
     private Date expirationDate;
 
 
-    Product(int id, String label, String mark, double price, String expirationDate) throws ParseException {
+    public Product(int id, String label, String mark, double price, String expirationDate) throws ParseException {
         if (price < 0) {
             throw new Error("price should be true");
         } else {
@@ -30,7 +31,7 @@ public class Product {
         this.label = label;
     }
 
-    Product() {
+    public Product() {
     }
 
     public int getId() {
@@ -82,7 +83,15 @@ public class Product {
     public static boolean comparer2products(Product product1, Product product2) {
         return product1.getId() == product2.getId() && product1.getLabel().equals(product2.getLabel()) && product1.getPrice() == product2.getPrice();
     }
+    public String determinerTypeProduit() {
 
+        if(this instanceof FruitProduct)
+            return "Fruit";
+        else if(this instanceof VegetableProduct)
+            return "Vegetable";
+        return "autre type";
+
+    }
     @Override
     public String toString() {
         return "Product{" +

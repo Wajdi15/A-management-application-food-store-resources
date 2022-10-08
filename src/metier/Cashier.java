@@ -1,7 +1,9 @@
+package metier;
+
 public class Cashier extends Employee {
     int numDeCaisse;
 
-    Cashier(int id, String name, String address, int nbrHours, int numDeCaisse) {
+    public Cashier(int id, String name, String address, int nbrHours, int numDeCaisse) {
         super(id, name, address, nbrHours);
         this.numDeCaisse = numDeCaisse;
     }
